@@ -6,7 +6,7 @@
 
 เรามา setup project กันสำหรับ tutorial นี้
 
-1. สร้าง project ใหม่ชื่อ `blog_tutorial` (สร้าง vitual environment ใหม่ด้วย)
+1. สร้าง project ใหม่ชื่อ `week4_tutorial` (สร้าง vitual environment ใหม่ด้วย)
 2. สร้าง app ชื่อ `blogs` และทำการตั้งค่าใน `settings.py`
 3. แก้ไขไฟล์ `/blogs/models.py` และเพิ่ม code ด้่านล่างลงไป โดย models เหล่านี้เราจะใช้ในการทำ tutorial วันนี้กัน
 
