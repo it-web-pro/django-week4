@@ -62,7 +62,7 @@ INSERT INTO public.shop_customer (id, first_name, last_name, email, address) VAL
 -- Data for Name: shop_productcategory; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.shop_productcategory (id, name) VALUES (1, 'Information technology');
+INSERT INTO public.shop_productcategory (id, name) VALUES (1, 'Information Technology');
 INSERT INTO public.shop_productcategory (id, name) VALUES (2, 'Electronics');
 INSERT INTO public.shop_productcategory (id, name) VALUES (3, 'Clothing and Apparel');
 INSERT INTO public.shop_productcategory (id, name) VALUES (4, 'Home Appliances');
