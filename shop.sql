@@ -144,6 +144,7 @@ INSERT INTO public.shop_product (id, name, description, remaining_amount, price)
 INSERT INTO public.shop_product (id, name, description, remaining_amount, price) VALUES (63, 'Gold Pendant Necklace', '14k yellow gold pendant necklace with chain.', 12, 59000.00);
 INSERT INTO public.shop_product (id, name, description, remaining_amount, price) VALUES (64, 'Gemstone Ring', 'Emerald-cut amethyst ring in sterling silver.', 20, 9000.00);
 INSERT INTO public.shop_product (id, name, description, remaining_amount, price) VALUES (65, 'Rose Gold Hoop Earrings', 'Small hoop earrings in 14k rose gold.', 2, 1200000.00);
+INSERT INTO public.shop_product (id, name, description, remaining_amount, price) VALUES (66, 'Salvage the Bones', 'Salvage the Bones is the second novel by American author Jesmyn Ward and published by Bloomsbury in 2011.', 0, 129.00);
 
 
 
@@ -229,6 +230,7 @@ INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) 
 INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) VALUES (73, 63, 9);
 INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) VALUES (74, 64, 9);
 INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) VALUES (75, 65, 9);
+INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) VALUES (76, 66, 7);
 
 
 
