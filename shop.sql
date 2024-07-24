@@ -233,8 +233,6 @@ INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) 
 INSERT INTO public.shop_product_categories (id, product_id, productcategory_id) VALUES (76, 66, 7);
 
 
-
-
 --
 -- TOC entry 3721 (class 0 OID 2147913)
 -- Dependencies: 241
@@ -324,7 +322,7 @@ INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (
 INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (81, '2024-05-20 15:09:36.225557+07', 15, 6);
 INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (82, '2024-05-21 20:29:18.225557+07', 54, 30);
 INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (83, '2024-05-21 20:35:26.225557+07', 3, 23);
-INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (84, '2024-05-21 26:12:50.225557+07', 42, 11);
+INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (84, '2024-05-21 25:12:50.225557+07', 42, 11);
 INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (85, '2024-05-22 12:39:13.225557+07', 57, 28);
 INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (86, '2024-05-22 12:09:41.225557+07', 33, 29);
 INSERT INTO public.shop_cart (id, create_date, expired_in, customer_id) VALUES (87, '2024-05-22 18:24:05.225557+07', 57, 16);
