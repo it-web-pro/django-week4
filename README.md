@@ -56,7 +56,7 @@ class Entry(models.Model):
 **NOTE: ให้เปิด Django shell ขึ้นมา (`python manage.py shell`) และพิมพ์คำสั่งดังนี้**
 
 ```python
->>> from blog.models import Blog
+>>> from blogs.models import Blog
 >>> b = Blog(name="Beatles Blog", tagline="All the latest Beatles news.")
 >>> b.save()
 ```
@@ -79,7 +79,7 @@ class Entry(models.Model):
 การ update foreign key ก็สามารถทำได้เหมือนกับการ update field ปกติ โดยใช้ `save()`
 
 ```python
->>> from blog.models import Blog, Entry
+>>> from blogs.models import Blog, Entry
 >>> entry = Entry.objects.get(pk=1)
 >>> cheese_blog = Blog.objects.get(name="Cheddar Talk")
 >>> entry.blog = cheese_blog # Update FK blog ของ entry (ID = 1) ไปที่ cheese_blog (name = "Cheddar Talk")
@@ -91,7 +91,7 @@ class Entry(models.Model):
 สมมติเราต้องการ add instance `joe` เป็นหนึ่งใน `authors` ของ instance `entry` (ID = 1)
 
 ```python
->>> from blog.models import Author
+>>> from blogs.models import Author
 >>> joe = Author.objects.create(name="Joe")
 >>> entry.authors.add(joe)
 ```
