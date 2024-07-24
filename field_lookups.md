@@ -135,7 +135,7 @@ Entry.objects.filter(Q(headline__startswith="Who") | ~Q(pub_date__year=2005))
 ```python
 Poll.objects.get(
     Q(question__startswith="Who"),
-    Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6)),
+    (Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6))),
 )
 ```
 
