@@ -47,6 +47,8 @@ class Entry(models.Model):
         return self.headline
 ```
 
+4. ทำการ `makemigrations` และ `migration`
+
 ## Creating objects
 
 ใน Django จะใช้หลักการดังนี้ `model class` จะเปรียบเสมืิอน `database table` และ `instance` ของ class นั้นๆ จะเปรียบเสมือนข้อมูล 1 `record` ใน table
