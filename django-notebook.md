@@ -71,11 +71,11 @@
 
 8. เข้าไปที่ folder `notebooks`
 
-    ![notebook_8](/images/notebook_8.png)
+    ![notebook_8](./images/notebook_8.png)
 
 9. สร้าง ไฟล์ ipynb สำหรับใช้กับ project django
 
-    ![create_ipynb](/images/create_ipynb.png)
+    ![create_ipynb](./images/create_ipynb.png)
 
 10. จากนั้นใน Cell แรกของไฟล์ Notebook เพิ่ม code นี้ลงไป
 
@@ -84,7 +84,7 @@
     os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
     ```
 
-    ![create_ipynb](/images/first.png)
+    ![create_ipynb](./images/first.png)
 
 
 11. สามารถทำการ import models และ query ข้อมูลโดยใช้ API ของ Django ได้เลย
