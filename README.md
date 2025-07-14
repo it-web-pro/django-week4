@@ -2,11 +2,11 @@
 
 [Django Doc](https://docs.djangoproject.com/en/5.0/topics/db/queries/)
 
-เมื่อเราทำการประกาศ class models.Model ใน models.py แล้ว เราจะสามารถใช้งาน database-abstraction API ที่จะช่วยให้่เรา create, retrieve, update และ delete ข้อมูลในฐานข้อมูลได้่อย่างง่ายและรวดเร็วมากๆ โดยไม่จำเป็นจะต้องเป็น SQL แม้แต่นิดเดียว
+เมื่อเราทำการประกาศ class models.Model ใน models.py แล้ว เราจะสามารถใช้งาน database-abstraction API ที่จะช่วยให้เรา create, retrieve, update และ delete ข้อมูลในฐานข้อมูลได้อย่างง่ายและรวดเร็วมากๆ โดยไม่จำเป็นจะต้องเป็น SQL แม้แต่นิดเดียว
 
 เรามา setup project กันสำหรับ tutorial นี้
 
-1. สร้าง project ใหม่ชื่อ `week4_tutorial` (สร้าง vitual environment ใหม่ด้วย)
+1. สร้าง project ใหม่ชื่อ `week4` (สร้าง vitual environment ใหม่ด้วย)
 2. สร้าง app ชื่อ `blogs` และทำการตั้งค่าใน `settings.py`
 3. แก้ไขไฟล์ `/blogs/models.py` และเพิ่ม code ด้่านล่างลงไป โดย models เหล่านี้เราจะใช้ในการทำ tutorial วันนี้กัน
 
@@ -51,7 +51,7 @@ class Entry(models.Model):
 
 ## Creating objects
 
-ใน Django จะใช้หลักการดังนี้ `model class` จะเปรียบเสมืิอน `database table` และ `instance` ของ class นั้นๆ จะเปรียบเสมือนข้อมูล 1 `record` ใน table
+ใน Django จะใช้หลักการดังนี้ `model class` จะเปรียบเสมือน `database table` และ `instance` ของ class นั้นๆ จะเปรียบเสมือนข้อมูล 1 `record` ใน table
 
 การสร้าง instance ของ class model ก็สามารถทำได้ง่ายๆ ดังนี้
 
@@ -130,6 +130,16 @@ class Entry(models.Model):
 >>> Entry.objects.filter(pub_date__year=2010)
 ```
 
+*Hint: ในกรณีที่อยากรู้ว่า Django generate SQL อะไรสำหรับคำสั่งนี้ให้ลอง print `.query` ออกมา*
+
+```python
+>>> print(Entry.objects.filter(pub_date__year=2010).query)
+```
+_____
+**ก่อนทำ tutorial ในขั้นต่อไป เรามาเปลี่ยนไปใช้งานใน Jupyter Notebook กันดีกว่า - ไปทำตามขั้นตอนติดตั้งใน `django-notebook.md`**
+
+_____
+
 ### Chaining filters
 
 เราสามารถ chain method `filter()` และ `exclude()` ได้
@@ -197,7 +207,7 @@ SELECT * FROM entry WHERE entry.headline LIKE "What%" AND entry.pub_date < CURRE
 ```
 
 ## Copying model instances
-Django ไม่มี method สำหรับ copy model instances แต่เราสามารถทำการ copy และสร้าง instance ใหม่ที่มีทุก field เหมือนต้นฉบับได้โดยการ set ให้ instance.pk = None และ instnace._state.adding = True
+Django ไม่มี method สำหรับ copy model instances แต่เราสามารถทำการ copy และสร้าง instance ใหม่ที่มีทุก field เหมือนต้นฉบับได้โดยการ set ให้ instance.pk = None และ instance._state.adding = True
 
 ดังในตัวอย่าง
 

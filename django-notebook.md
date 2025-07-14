@@ -35,9 +35,8 @@
 
     แก้ไข version notebook
     ```sh
-    pip install notebook==6.5.6
+    pip install notebook==6.5.7
     ```
-    หากติดตั้ง หรือ run jupyter ไม่ได้ให้ลองเปลี่ยน notebook version ดังนี้ `6.5.7`
 
 5. จากนั้นสร้าง directory ชื่อ `notebooks`
 
@@ -55,7 +54,6 @@
         "django.contrib.sessions",
         "django.contrib.messages",
         "django.contrib.staticfiles",
-
         "django_extensions",
         "blogs",
     ]
