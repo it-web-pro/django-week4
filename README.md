@@ -82,8 +82,9 @@ class Entry(models.Model):
 
 ```python
 >>> from blogs.models import Blog, Entry
->>> entry = Entry.objects.get(pk=1)
->>> cheese_blog = Blog.objects.get(name="Cheddar Talk")
+>>> from datetime import date
+>>> entry = Entry.objects.create(blog=b, headline="First entry", body_text="Bla bla bla", pub_date=date(2025, 1, 1))
+>>> cheese_blog = Blog.objects.create(name="Cheddar Talk", tagline="Greate cheese!")
 >>> entry.blog = cheese_blog # Update FK blog ของ entry (ID = 1) ไปที่ cheese_blog (name = "Cheddar Talk")
 >>> entry.save()
 ```
@@ -112,7 +113,7 @@ class Entry(models.Model):
 
 การ `SELECT` ข้อมูลออกมาจาก database นั้นทาง Django มี API ให้เราใช้งานได้ง่ายและสามารถทำ query ที่ซับซ้อนได้ด้วย โดยเราจะได้ instance ของ class `Queryset` มาใช้งาน
 
-> A **QuerySet** represents a collection of objects from your database. It can have zero, one or many filters. **Filters** narrow down the query results based on the given parameters. In SQL terms, a QuerySet equates to a SELECT statement, and a filter is a limiting clause such as WHERE or LIMIT.
+> A **QuerySet** represents a collection of objects from your database. **Filters** narrow down the query results based on the given parameters. In SQL terms, a QuerySet equates to a SELECT statement, and a filter is a limiting clause such as WHERE or LIMIT.
 
 เราจะใช้งาน API ของ Django โดยการเรียกใช้ Manager ของ class `models.Model` การเข้าใช้งาน Manager จะเข้าถึงด้วย `.objects` ยกตัวอย่างถ้าเราต้องการ SELECT ข้อมูลทั้งหมดในตาราง `Entry`
 
