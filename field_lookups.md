@@ -121,6 +121,8 @@ SELECT * FROM entry WHERE headline LIKE '%Lennon%' AND pub_date BETWEEN '2005-01
 กรณี OR
 
 ```python
+from django.db.models import Q
+
 Entry.objects.filter(Q(headline__startswith="Who") | Q(headline__startswith="What"))
 # SELECT ... WHERE headline LIKE 'Who%' OR headline LIKE 'What%'
 ```
